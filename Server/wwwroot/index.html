@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Listings</title>
+    <link rel="shortcut icon" href="/favicon.svg" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="/movie-api.js"></script>
+    <!-- Notice the relative path here -->
+    <script type="module" src="main.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Listings</h1>
+    </header>
+
+    <main>
+      <h2>List</h2>
+
+      <ul id="movie-list">
+        <li>
+          <!-- Notice the final url query parameter here "?1" -->
+          <a href="/movie?1">Details</a>
+        </li>
+        <li>
+          <!-- Notice the final url query parameter here "?2" -->
+          <a href="/movie?2">Details</a>
+        </li>
+      </ul>
+    </main>
+
+    <footer>
+      <a href="/register">Registration</a>
+    </footer>
+  </body>
+</html>
