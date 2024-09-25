@@ -20,15 +20,18 @@
 
 console.log("Movie API Module loaded");
 
-// Due to how this is setup we are hardcoding the
-// address the server is reachable on, in
-// a production environment, this would have been
-// lifted up and only passed in when deploying the
-// applications. But this would require us to setup
-// a build process, which is out of scope for now
-const movieApiAddress = "http://localhost:5271";
+// Since the origin domain of the HTML
+// and the domain for the Web API
+// is the same. We can make use
+// of the Fetch APIs default relative
+// address when making calls
+//
+// Ie.
+// Server Address: http://localhost:4343
+// then 'fetch("/api/v1/movies")'
+// translates to 'fetch("http://localhost:4343/api/v1/movies")
 const apiVersion = "/api/v1";
-const url = movieApiAddress + apiVersion;
+const url = apiVersion;
 
 // Utilities
 
